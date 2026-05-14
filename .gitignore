@@ -1,0 +1,73 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Python build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyPI / packaging
+*.tar.gz
+*.whl
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+.python-version
+
+# Jupyter
+.ipynb_checkpoints/
+*-checkpoint.ipynb
+
+# Testing & coverage
+.tox/
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+nosetests.xml
+coverage.xml
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Local presentation build artifacts
+presentation/node_modules/
+presentation/_unpacked/
+presentation/*.pdf
+presentation/*.jpg
+presentation/*.png
+presentation/fintel_FE520_v2_raw.pptx
+
+# Credentials — never commit
+.pypirc
+.env
+*.token

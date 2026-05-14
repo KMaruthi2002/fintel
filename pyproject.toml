@@ -1,0 +1,85 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+# -----------------------------------------------------------------------------
+# Project metadata (PEP 621)
+# -----------------------------------------------------------------------------
+[project]
+name = "fintel"
+version = "1.0.0"
+description = "Financial Telemetry & Observability: OpenTelemetry-inspired stock-market monitoring in Python."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Maruthi Kunchala", email = "kunchalamaruthi@gmail.com" },
+]
+maintainers = [
+    { name = "Maruthi Kunchala", email = "kunchalamaruthi@gmail.com" },
+]
+keywords = [
+    "finance",
+    "observability",
+    "opentelemetry",
+    "monitoring",
+    "stock-market",
+    "quantitative-finance",
+    "alerting",
+    "technical-indicators",
+    "dashboard",
+    "telemetry",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Financial and Insurance Industry",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business :: Financial :: Investment",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Scientific/Engineering :: Visualization",
+    "Topic :: System :: Monitoring",
+    "Typing :: Typed",
+]
+
+dependencies = [
+    "pandas>=1.5",
+    "numpy>=1.22",
+    "matplotlib>=3.5",
+    "yfinance>=0.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "build>=1.0",
+    "twine>=4.0",
+]
+notebook = [
+    "jupyter>=1.0",
+    "ipykernel>=6.0",
+]
+
+[project.urls]
+Homepage      = "https://github.com/KMaruthi2002/fintel"
+Documentation = "https://github.com/KMaruthi2002/fintel#readme"
+Repository    = "https://github.com/KMaruthi2002/fintel"
+Issues        = "https://github.com/KMaruthi2002/fintel/issues"
+Changelog     = "https://github.com/KMaruthi2002/fintel/releases"
+
+# -----------------------------------------------------------------------------
+# Setuptools configuration
+# -----------------------------------------------------------------------------
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["fintel*"]
+exclude = ["tests*", "presentation*", "*.tests*"]
