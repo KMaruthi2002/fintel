@@ -59,13 +59,8 @@ coverage.xml
 *.swp
 *.swo
 
-# Local presentation build artifacts
-presentation/node_modules/
-presentation/_unpacked/
-presentation/*.pdf
-presentation/*.jpg
-presentation/*.png
-presentation/fintel_FE520_v2_raw.pptx
+# Course presentation deliverables (not part of the published package)
+presentation/
 
 # Credentials — never commit
 .pypirc
