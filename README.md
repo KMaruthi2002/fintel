@@ -224,7 +224,6 @@ except InsufficientDataError as e:
 | Test suite | 9 groups, 30+ assertions, all error paths exercised |
 | Python versions tested | 3.8, 3.9, 3.10, 3.11, 3.12 |
 | Active development | Yes |
-| Production deployments | Academic project; treat as beta for production use |
 
 ### Roadmap
 
