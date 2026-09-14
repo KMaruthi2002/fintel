@@ -249,5 +249,3 @@ Stevens Institute of Technology, Spring 2026.
 ```
 
 ---
-
-Made for FE 520 at Stevens Institute of Technology. Built with pandas, numpy, matplotlib, and yfinance, intentionally and only.
