@@ -1,5 +1,9 @@
 # fintel
 
+[![PyPI version](https://img.shields.io/pypi/v/fintel.svg)](https://pypi.org/project/fintel/)
+[![Python versions](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://pypi.org/project/fintel/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+
 **Financial Telemetry & Observability.** A Python package that applies the engineering discipline of [OpenTelemetry](https://opentelemetry.io/) to stock-market monitoring. Spans become detected market anomalies. Metrics become technical indicators. Alerting rules and SLOs become portfolio governance. Dashboards compose everything into one figure.
 
 If you can monitor a production system, you can monitor a portfolio the same way. fintel is built around that thesis.
