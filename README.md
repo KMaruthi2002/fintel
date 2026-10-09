@@ -12,6 +12,8 @@ If you can monitor a production system, you can monitor a portfolio the same way
 pip install fintel
 ```
 
+🎬 **[Watch the 1-minute explainer](demo/fintel_Explainer.mp4)**
+
 ## Table of contents
 
 - [Why fintel](#why-fintel)
