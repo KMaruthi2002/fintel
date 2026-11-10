@@ -74,7 +74,7 @@ def validate_ohlcv(data):
 
 def validate_positive_int(value, name):
     """Validate that a parameter is a positive integer."""
-    if not isinstance(value, (int, np.integer)):
+    if isinstance(value, (bool, np.bool_)) or not isinstance(value, (int, np.integer)):
         raise InvalidParameterError(f"{name} must be an integer, got {type(value).__name__}")
     if value <= 0:
         raise InvalidParameterError(f"{name} must be positive, got {value}")
@@ -82,7 +82,11 @@ def validate_positive_int(value, name):
 
 def validate_positive_float(value, name):
     """Validate that a parameter is a positive number."""
-    if not isinstance(value, (int, float, np.integer, np.floating)):
+    if isinstance(value, (bool, np.bool_)) or not isinstance(
+        value, (int, float, np.integer, np.floating)
+    ):
         raise InvalidParameterError(f"{name} must be a number, got {type(value).__name__}")
+    if not np.isfinite(value):
+        raise InvalidParameterError(f"{name} must be finite, got {value}")
     if value <= 0:
         raise InvalidParameterError(f"{name} must be positive, got {value}")
