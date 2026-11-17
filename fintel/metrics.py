@@ -76,9 +76,13 @@ class MetricsEngine:
             avg_gain = gain.rolling(window=window).mean()
             avg_loss = loss.rolling(window=window).mean()
 
-            rs = np.where(avg_loss != 0, avg_gain / avg_loss, 100.0)
+            rs = avg_gain / avg_loss.where(avg_loss != 0)
             rsi_values = 100 - (100 / (1 + rs))
-            self._cache[key] = pd.Series(rsi_values, index=self.data.index, name="RSI")
+            # With no losses in the window RSI is 100 (all gains) or 50 (no movement at all).
+            no_loss = (avg_loss == 0) & avg_gain.notna()
+            rsi_values = rsi_values.mask(no_loss & (avg_gain > 0), 100.0)
+            rsi_values = rsi_values.mask(no_loss & (avg_gain == 0), 50.0)
+            self._cache[key] = pd.Series(rsi_values.to_numpy(), index=self.data.index, name="RSI")
         return self._cache[key]
 
     def rolling_volatility(self, window=20):
